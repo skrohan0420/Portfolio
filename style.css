@@ -1,0 +1,279 @@
+@import url('http://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+	/*outline: 1px solid black;*/
+}
+:root{
+	--border: 1px solid red;
+	--allcolor: rgba(0, 0, 0, 0.5);
+}
+html{
+	scroll-behavior: smooth;
+}
+body{
+	display: flex;
+	/*background: red;*/
+}
+section{
+	border-top: 1px solid rgba(0, 0, 0, .1);
+	border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+.navbar{
+	position: fixed;
+	z-index: 1000;
+	width: 230px;
+	height: 100%;
+	/*outline: var(--border);*/
+	overflow: hidden;
+	background: white;
+	transform: translateX(-100%);
+	transition: 0.6s;
+}
+.navbar.active{
+	transform: translateX(0px);
+}
+nav{
+	position: absolute;
+}
+ul{
+	margin: 50% 0px 0px 0px;
+}
+nav ul li{
+	margin: 40px 0px 40px 0px;
+	padding: 0px 20px 0px 20px;
+}
+nav ul li a span{
+	font-size: 1.3em;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-weight: 500;
+	color: var(--allcolor);
+	/*outline: var(--border);*/
+}
+nav ul li i{
+	font-size: 3ch;
+	text-align: center;
+	width: 30px;
+	/*outline: var(--border);*/
+	color: var(--allcolor);
+	margin: 0px 5px 0px 20px;
+}
+.nav-toggle{
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	margin: 10px;
+	font-size: 4ch;
+	color: var(--allcolor);
+	cursor: pointer;
+	transition: 0.6s;
+	z-index: 1000;
+}
+.nav-toggle.active{
+	transform: translateX(175px) rotate(90deg) ;
+	transition-delay: 0.6s;
+}
+main{
+	width: 100%;
+}
+.banner{
+	min-width: 100%;
+	min-height: 100vh;
+	/*outline: var(--border);*/
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.banner .imgBx{
+	height: 200px;
+	width: 200px;
+	overflow: hidden;
+	border-radius: 100%;
+	background-image: url('https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+	background-size: cover;
+	background-position: center;
+	transition: 0.2s;
+	position: relative;
+}
+.banner h1{
+	text-align: center;
+	font-size: 3.5ch;
+	font-weight: 500;
+	color: var(--allcolor);
+	transition: 0.1s;
+	transform-origin: center;
+	text-transform: uppercase;
+
+}
+.banner p{
+	text-align: center;
+	font-size: 15px;
+	color: var(--allcolor);
+	margin: 0px 0px 40px 0px;
+}
+.banner .socialBx{
+	/*outline: var(--border);*/
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	bottom: 30px;
+}
+.banner .socialBx button{
+	position: relative;
+	cursor: pointer;
+	height: 50px;
+	width: 50px;
+	outline: none;
+	border: none;
+	background: rgba(0, 0, 0, .1);
+	color:  rgba(0, 0, 0, .7);
+	font-size: 1.5em;
+	transition: 0.2s;
+	margin: 0px 5px 0px 5px;
+}
+.banner .socialBx button:hover{
+	transform: translateY(-10px);
+	transition: 0.2s;
+}
+.banner .myCv{
+	width: 200px;
+	height: 40px;
+	background: var(--allcolor);
+	display: grid;
+	place-items: center;
+	font-size: 1.3em;
+	font-weight: 700;
+	color: white;
+}
+
+
+
+
+
+
+
+.imgBx.animate{
+	position: fixed;
+	height: 50px;
+	width: 50px;
+	top: 5px;
+	right: 10px;
+	z-index: 20;
+}
+.nameBx.animate{
+	position: fixed;
+	font-size: 20px;
+	top: 15px;
+	z-index: 20;
+}
+.navBack{
+	z-index: 10;
+	top: 0px;
+	left: 0px;
+	position: fixed;
+	width: 100%;
+	/*outline: var(--border);*/
+	height: 60px;
+	background: white;
+	display: none;
+}
+.navBack.active{
+	display: block;
+	outline: 3px solid rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+main .about{
+	height: 100vh;
+	width: 100%;
+}
+.heading{
+	position: relative;
+	top: 80px;
+	text-align: center;
+	color: var(--allcolor);
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+main .about hr{
+	position: relative;
+	top: 80px;
+	background: var(--allcolor);
+	height: 3px;
+	width: 100px;
+	margin: auto;
+}
+main .about .conBx{
+	height: fit-content;
+	position: relative;
+	top: 80px;
+	margin: 30px 30px 0px 30px;
+	display: flex;
+	flex-direction: column;
+	/*outline: var(--border);*/
+}
+main .about .conBx .imgBx {
+	background-image: url('https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+	height: 260px;
+	width: 260px;
+	background-size: cover;
+	margin: 0px auto 30px auto;
+
+}
+main .about .conBx  p{
+	margin: auto;
+	width: 260px;
+	color: var(--allcolor);
+	text-align: justify;
+	font-size: 0.95em;
+}
+
+
+
+
+
+
+
+
+
+
+
+main .skills{
+	height: 100vh;
+	width: 100%;
+}
+main .skills hr{
+	position: relative;
+	top: 80px;
+	background: var(--allcolor);
+	height: 3px;
+	width: 70px;
+	margin: auto;
+}
+main .skills .conBx {
+	display: flex;
+	position: relative;
+	top: 80px;
+	border: var(--border);
+	margin: 30px 40px 0px 40px;
+}
+
